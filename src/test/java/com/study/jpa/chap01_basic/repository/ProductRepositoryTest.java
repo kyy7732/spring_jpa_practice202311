@@ -1,7 +1,6 @@
 package com.study.jpa.chap01_basic.repository;
 
 import com.study.jpa.chap01_basic.entity.Product;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
