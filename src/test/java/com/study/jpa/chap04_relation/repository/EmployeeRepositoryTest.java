@@ -2,6 +2,7 @@ package com.study.jpa.chap04_relation.repository;
 
 import com.study.jpa.chap04_relation.entity.Department;
 import com.study.jpa.chap04_relation.entity.Employee;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,7 +24,7 @@ class EmployeeRepositoryTest {
     @Autowired
     DepartmentRepository departmentRepository;
 
-    //    @BeforeEach
+//    @BeforeEach
     void bulkInsert() {
         Department d1 = Department.builder()
                 .name("영업부")

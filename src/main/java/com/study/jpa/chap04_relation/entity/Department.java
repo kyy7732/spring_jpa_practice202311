@@ -31,8 +31,6 @@ public class Department {
     @OneToMany(mappedBy = "department") // 컬럼이 만들어 지지 않고 읽기 전용으로
     private List<Employee> employees = new ArrayList<>(); // 초기화가 필요합니다. (NPE 방지)
 
-
-
 }
 
 
