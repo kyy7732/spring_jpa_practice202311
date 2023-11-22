@@ -21,7 +21,7 @@ public class HashTag {
 
     private String tagName; // 해시태그 이름
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL) // 부모에게 변화가 있으면 자식에게도 변화가 생기게함
     @JoinColumn(name = "post_no")
     private Post post;
 
