@@ -1,6 +1,7 @@
 package com.study.jpa.chap05_practice.api;
 
 import com.study.jpa.chap05_practice.dto.PageDTO;
+import com.study.jpa.chap05_practice.dto.PostListResponseDTO;
 import com.study.jpa.chap05_practice.service.PostService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -9,7 +10,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-@RestController
+@RestController // 화면단이 리액트기 때문에 RestController로 사용해야 함
 @Slf4j
 @RequiredArgsConstructor
 @RequestMapping("/api/v1/posts")
@@ -30,7 +31,27 @@ public class PostApiController {
     public ResponseEntity<?> list(PageDTO pageDTO) {
         log.info("/api/v1/posts?page={}&size={}", pageDTO.getPage(),pageDTO.getSize());
 
-        return null;
+        PostListResponseDTO dto = postService.getPosts(pageDTO);
+
+        return ResponseEntity.ok().body(dto);
     }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
