@@ -53,7 +53,6 @@ public class Post {
             hashTag.setPost(this);
         }
     }
-
 }
 
 

@@ -38,7 +38,6 @@ public class PostCreateDTO {
                 // 객체를 받고
                 // builder를 이용해서 값을 넣지 않으면 null이 들어간다.
                 .build();
-    }
-    
 
+    }
 }
